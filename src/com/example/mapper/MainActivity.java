@@ -86,6 +86,7 @@ List<Overlay> listOfOverlaysTemp;
 		});
 	}
 	public void setLocationListener(){
+		Toast.makeText(getBaseContext(), "Listener Started", Toast.LENGTH_SHORT).show();
 		((Button)findViewById(R.id.stopButton)).setClickable(true);
 		clear();
 		locationListener = new MyLocationListener();
@@ -98,6 +99,7 @@ List<Overlay> listOfOverlaysTemp;
 		mapView.invalidate();
 	}
 	public void disableLocationListener(){
+		Toast.makeText(getBaseContext(), "Listener Stopped", Toast.LENGTH_SHORT).show();
 		((Button)findViewById(R.id.stopButton)).setClickable(false);
 		locationManager.removeUpdates(locationListener);
 		((Button)findViewById(R.id.startButton)).setClickable(true);
